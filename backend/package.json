@@ -4,9 +4,9 @@
   "name": "inventory-insights-backend",
   "version": "1.0.0",
   "description": "Backend for Inventory Insights application",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/src/server.js",
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
     "seed": "ts-node src/scripts/seedProducts.ts"

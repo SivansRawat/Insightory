@@ -9,8 +9,8 @@ const path = require('path');
 // const OtpEmail = require(path.resolve(__dirname, '../../../frontend/emails/OtpEmail.js'));
 // const WelcomeEmail = require(path.resolve(__dirname, '../../../frontend/emails/WelcomeEmail.js'));
 
-import OtpEmail from 'frontend/emails/OtpEmail';
-import WelcomeEmail from 'frontend/emails/WelcomeEmail';
+import OtpEmail from '../../emails/OtpEmail';
+import WelcomeEmail from '../../emails/WelcomeEmail';
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com", // Replace with your SMTP host

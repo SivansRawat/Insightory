@@ -28,16 +28,12 @@
     "target": "es2020",         // Compile to ES2020 JavaScript
     "module": "commonjs",       // Use CommonJS modules for Node.js
     "outDir": "./dist",         // Compiled JavaScript files will go into the 'dist' directory
-    "rootDir": "../",           // CRITICAL: Set rootDir to the parent folder (Insightory/)
+    "rootDir": ".",           // CRITICAL: Set rootDir to the parent folder (Insightory/)
     "strict": true,
     "esModuleInterop": true,    // Enable interoperability between CommonJS and ES Modules
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,       // Skip type checking of all declaration files (*.d.ts)
     "resolveJsonModule": true,  // Allow importing .json files
-    "baseUrl": "../",           // CRITICAL: Set baseUrl to the parent folder (Insightory/)
-    "paths": {
-      "frontend/emails/*": ["frontend/emails/*"] // CRITICAL: Path relative to the new baseUrl
-    },
     "jsx": "react-jsx"          // Needed for React Email templates
   },
   "include": [
