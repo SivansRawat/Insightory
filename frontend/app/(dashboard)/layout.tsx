@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -101,7 +102,17 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
             <AvatarFallback>UN</AvatarFallback>
           </Avatar> */}
-          <Button variant="ghost" className="text-sm">
+          <Button
+            variant="ghost"
+            className="text-sm"
+            onClick={() => {
+              // Clear stored token or authentication state here
+              if (typeof window !== 'undefined') {
+                localStorage.removeItem('jwtToken');
+                window.location.href = '/';
+              }
+            }}
+          >
             Logout
           </Button>
         </div>

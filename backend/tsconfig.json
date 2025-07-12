@@ -1,0 +1,49 @@
+// {
+//   "compilerOptions": {
+//     "target": "es2020",         // Compile to ES2020 JavaScript
+//     "module": "commonjs",       // Use CommonJS modules for Node.js
+//     "outDir": "./dist",         // Compiled JavaScript files will go into the 'dist' directory
+//     "rootDir": "../",           // **CRITICAL CHANGE:** Set rootDir to the parent folder (Insightory/)
+//     "strict": true,
+//     "esModuleInterop": true,    // Enable interoperability between CommonJS and ES Modules
+//     "forceConsistentCasingInFileNames": true,
+//     "skipLibCheck": true,       // Skip type checking of all declaration files (*.d.ts)
+//     "resolveJsonModule": true,  // Allow importing .json files
+//     "baseUrl": "../",           // **CRITICAL CHANGE:** Set baseUrl to the parent folder (Insightory/)
+//     "paths": {
+//       "frontend/emails/*": ["frontend/emails/*"] // **CRITICAL CHANGE:** Path relative to the new baseUrl
+//     },
+//     "jsx": "react-jsx"          // Needed for React Email templates
+//   },
+//   "include": [
+//     "src/**/*.ts",              // Includes all .ts files within backend/src folder
+//     "src/scripts/**/*.ts",      // Includes all .ts files within backend/src/scripts folder
+//     "frontend/emails/**/*.tsx"  // **CRITICAL CHANGE:** Explicitly include frontend .tsx files from the parent root
+//   ],
+//   "exclude": ["node_modules", "dist"] // Exclude node_modules and output folder
+// }
+
+{
+  "compilerOptions": {
+    "target": "es2020",         // Compile to ES2020 JavaScript
+    "module": "commonjs",       // Use CommonJS modules for Node.js
+    "outDir": "./dist",         // Compiled JavaScript files will go into the 'dist' directory
+    "rootDir": "../",           // CRITICAL: Set rootDir to the parent folder (Insightory/)
+    "strict": true,
+    "esModuleInterop": true,    // Enable interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,       // Skip type checking of all declaration files (*.d.ts)
+    "resolveJsonModule": true,  // Allow importing .json files
+    "baseUrl": "../",           // CRITICAL: Set baseUrl to the parent folder (Insightory/)
+    "paths": {
+      "frontend/emails/*": ["frontend/emails/*"] // CRITICAL: Path relative to the new baseUrl
+    },
+    "jsx": "react-jsx"          // Needed for React Email templates
+  },
+  "include": [
+    "src/**/*.ts",              // Includes all .ts files within backend/src folder
+    "src/scripts/**/*.ts",      // Includes all .ts files within backend/src/scripts folder
+    "frontend/emails/**/*.tsx"  // CRITICAL: Explicitly include frontend .tsx files from the parent root
+  ],
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and output folder
+}
