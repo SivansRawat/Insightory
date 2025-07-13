@@ -14,16 +14,17 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     <div className="flex min-h-screen w-full flex-col">
       {/* ...existing code... */} 
       <nav className="flex space-x-4 bg-gray-100 p-4">
+        <Link href="/dashboard/overview" passHref>
+          <Button variant="outline" className="capitalize">
+            Overview
+          </Button>
+        </Link>
         <Link href="/dashboard/products" passHref>
           <Button variant="outline" className="capitalize">
             Products
           </Button>
         </Link>
-        <Link href="/dashboard/analytics" passHref>
-          <Button variant="outline" className="capitalize">
-            Analytics
-          </Button>
-        </Link>
+        
       </nav>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
         {children}
