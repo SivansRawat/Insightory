@@ -59,6 +59,8 @@ const ProductsPage = () => {
   // This calculation is safe because 'products' is initialized as []
   // and will be updated to an array.
   const categoryCounts = products.reduce<Record<string, number>>((acc, product) => {
+        const categoryName = product.category || 'Unknown Category'; // If category is undefined, use 'Unknown Category'
+
     acc[product.category] = (acc[product.category] || 0) + 1;
     return acc;
   }, {});

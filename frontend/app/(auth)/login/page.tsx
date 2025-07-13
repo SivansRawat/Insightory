@@ -52,12 +52,12 @@ export default function LoginPage() {
 
       const data = await response.json();
 
-      if (response.ok) {
-        setMessage(data.message + ' Redirecting to OTP verification...');
-        router.push(`/auth/verify-otp?email=${encodeURIComponent(email)}`); // Pass email to next page
-      } else {
-        setMessage(data.message || 'Failed to send OTP.');
-      }
+        if (response.ok) {
+          setMessage(data.message + ' Redirecting to OTP verification...');
+          router.push(`/verify-otp?email=${encodeURIComponent(email)}`); // Pass email to next page, corrected path
+        } else {
+          setMessage(data.message || 'Failed to send OTP.');
+        }
     } catch (error) {
       console.error('Error:', error);
       setMessage('Network error. Please try again.');
