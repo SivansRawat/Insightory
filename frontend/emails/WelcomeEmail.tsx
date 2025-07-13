@@ -32,14 +32,14 @@ import {
                   className="my-0 mx-auto"
                 /> */}
                 <Text className="text-2xl font-bold text-gray-900 mt-4 mb-2">
-                  Inventory Insights
+                  Insightory
                 </Text>
               </Section>
               <Text className="text-black text-[14px] leading-[24px]">
                 Hello <strong className="font-semibold">{userEmail}</strong>,
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
-                Welcome to Inventory Insights! Your email has been successfully verified.
+                Welcome to Insightory! Your email has been successfully verified.
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
                 We're excited to help you gain valuable insights into your product inventory.
@@ -57,7 +57,7 @@ import {
               </Text>
               <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
               <Text className="text-[#666666] text-[12px] leading-[24px]">
-                This email was sent from Inventory Insights.
+                This email was sent from Insightory.
               </Text>
             </Container>
           </Body>

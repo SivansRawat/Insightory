@@ -36,7 +36,7 @@ app.use('/api/products', productRoutes);
 
 // Simple test route
 app.get('/', (req, res) => {
-  res.send('Inventory Insights Backend API is running!');
+  res.send('Insightory Backend API is running!');
 });
 
 // Start the server

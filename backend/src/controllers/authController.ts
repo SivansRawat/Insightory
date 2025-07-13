@@ -56,7 +56,7 @@ export const sendOtp = async (req: Request, res: Response) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Your Inventory Insights OTP Code',
+      subject: 'Your Insightory OTP Code',
       html: emailHtml,
     };
 
@@ -89,7 +89,7 @@ export const verifyOtp = async (req: Request, res: Response) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Welcome to Inventory Insights!',
+      subject: 'Welcome to Insightory!',
       html: welcomeEmailHtml,
     });
 
@@ -129,7 +129,7 @@ export const resendOtp = async (req: Request, res: Response) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Your New Inventory Insights OTP Code',
+      subject: 'Your New Insightory OTP Code',
       html: emailHtml,
     };
 

@@ -69,7 +69,7 @@ export default function LoginPage() {
   return (
     <div className="text-center">
       <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-        Login or Sign Up
+        Login to Insightory
       </h2>
       <p className="mt-2 text-sm text-gray-600">
         Enter your email to receive an OTP.

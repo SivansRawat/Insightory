@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-24 bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800">
       <div className="z-10 w-full max-w-xl items-center justify-between font-mono text-sm lg:flex flex-col text-center">
         <h1 className="text-5xl font-bold mb-6 text-indigo-800 leading-tight">
-          Welcome to <span className="text-blue-600">Inventory Insights</span>
+          Welcome to <span className="text-blue-600">Insightory</span>
         </h1>
         <p className="text-lg mb-8 max-w-prose">
           Unlock the power of your product data. Track stock, analyze performance, and gain valuable insights for smarter decisions.
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
       <footer className="absolute bottom-6 text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Inventory Insights. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Insightory. All rights reserved.</p>
       </footer>
     </main>
   );

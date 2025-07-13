@@ -3,7 +3,7 @@
 {
   "name": "inventory-insights-backend",
   "version": "1.0.0",
-  "description": "Backend for Inventory Insights application",
+  "description": "Backend for Insightory application",
   "main": "dist/src/server.js",
   "scripts": {
     "start": "node dist/src/server.js",
