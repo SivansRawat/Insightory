@@ -12,13 +12,21 @@ const path = require('path');
 import OtpEmail from '../../emails/OtpEmail';
 import WelcomeEmail from '../../emails/WelcomeEmail';
 
+console.log("EMAIL_USER:", process.env.EMAIL_USER ? "Loaded" : "Not Loaded");
+console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
+
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com", // Replace with your SMTP host
-  port: 587, // Use 465 for secure: true, 587 for secure: false
-  secure: false, // Use true if port is 465
+  // host: "smtp.gmail", // Replace with your SMTP host
+  // port: 587, // Use 465 for secure: true, 587 for secure: false
+  // secure: false, // Use true if port is 465
+  // auth: {
+  //   user: process.env.EMAIL_USER,
+  //   pass: process.env.EMAIL_PASS,
+    service: "gmail", // Nodemailer will auto-configure host/port/secure
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
+
   },
 });
 
