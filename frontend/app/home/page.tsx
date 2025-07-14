@@ -154,6 +154,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <p className="text-slate-700 mb-6 text-lg leading-relaxed">
                  &quot; {testimonial.content}&quot;
                 </p>
