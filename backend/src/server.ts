@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // IMPORTANT: Allow requests from your Next.js frontend
+  origin: ['https://insightory.vercel.app/home', 'http://localhost:3000'], // IMPORTANT: Allow requests from your Next.js frontend
   credentials: true
 }));
 
