@@ -155,7 +155,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-slate-700 mb-6 text-lg leading-relaxed">
-                  "{testimonial.content}"
+                 &quot; {testimonial.content}&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
