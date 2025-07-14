@@ -57,38 +57,86 @@ A modern, full-stack inventory management dashboard built with Next.js, Node.js,
 
 ```
 Insightory/
-├── frontend/                 # Next.js frontend application
-│   ├── app/                 # App Router pages and layouts
-│   │   ├── auth/           # Authentication pages
-│   │   │   ├── login/      # Login page
-│   │   │   ├── verify-otp/ # OTP verification page
-│   │   │   └── layout.tsx  # Auth layout
-│   │   ├── dashboard/      # Dashboard pages
-│   │   │   ├── overview/   # Dashboard overview
-│   │   │   ├── products/   # Products management
-│   │   │   ├── categories/ # Category analytics
-│   │   │   ├── brands/     # Brand analysis
-│   │   │   ├── stock/      # Stock management
-│   │   │   ├── discounts/  # Sales & discounts
-│   │   │   ├── reviews/    # Reviews & ratings
-│   │   │   ├── analytics/  # Advanced analytics
-│   │   │   └── layout.tsx  # Dashboard layout
-│   │   └── layout.tsx      # Root layout
-│   ├── components/         # Reusable UI components
-│   │   └── ui/            # shadcn/ui components
-│   ├── lib/               # Utility functions
-│   ├── emails/            # Email templates
-│   ├── styles/            # Global styles
-│   └── public/            # Static assets
-├── backend/                # Node.js backend application
-│   ├── controllers/       # Route controllers
-│   ├── models/           # Database models
-│   ├── routes/           # API routes
-│   ├── middleware/       # Custom middleware
-│   ├── emails/           # Email templates
-│   └── server.js         # Server entry point
-├── .gitignore
-└── README.md
+├── frontend/                    # Next.js frontend application
+│   ├── .next/                  # Next.js build output (auto-generated)
+│   ├── app/                    # App Router pages and layouts
+│   │   ├── auth/               # Authentication pages
+│   │   │   ├── login/          # Login page
+│   │   │   │   └── page.tsx    # Login page component
+│   │   │   ├── verify-otp/     # OTP verification page
+│   │   │   │   ├── page.tsx    # OTP verification wrapper
+│   │   │   │   └── VerifyOtpPage.tsx # Main OTP verification component
+│   │   │   └── layout.tsx      # Auth layout
+│   │   ├── dashboard/          # Dashboard pages
+│   │   │   ├── overview/       # Dashboard overview
+│   │   │   │   └── page.tsx    # Overview page component
+│   │   │   ├── products/       # Products management
+│   │   │   │   └── page.tsx    # Products page component
+│   │   │   ├── categories/     # Category analytics
+│   │   │   │   └── page.tsx    # Categories page component
+│   │   │   ├── brands/         # Brand analysis
+│   │   │   │   └── page.tsx    # Brands page component
+│   │   │   ├── stock/          # Stock management
+│   │   │   │   └── page.tsx    # Stock page component
+│   │   │   ├── discounts/      # Sales & discounts
+│   │   │   │   └── page.tsx    # Discounts page component
+│   │   │   ├── reviews/        # Reviews & ratings
+│   │   │   │   └── page.tsx    # Reviews page component
+│   │   │   ├── analytics/      # Advanced analytics
+│   │   │   │   └── page.tsx    # Analytics page component
+│   │   │   └── layout.tsx      # Dashboard layout
+│   │   ├── globals.css         # Global CSS styles
+│   │   ├── layout.tsx          # Root layout
+│   │   └── page.tsx            # Home/landing page
+│   ├── components/             # Reusable UI components
+│   │   └── ui/                 # shadcn/ui components
+│   │       ├── alert.tsx       # Alert component
+│   │       ├── button.tsx      # Button component
+│   │       ├── card.tsx        # Card component
+│   │       ├── input.tsx       # Input component
+│   │       ├── label.tsx       # Label component
+│   │       └── sheet.tsx       # Sheet component
+│   ├── lib/                    # Utility functions
+│   │   └── utils.ts            # Utility functions
+│   ├── emails/                 # Email templates
+│   │   ├── OtpEmail.tsx        # OTP email template
+│   │   └── ConfirmationEmail.tsx # Confirmation email template
+│   ├── public/                 # Static assets
+│   │   ├── favicon.ico         # Favicon
+│   │   └── images/             # Image assets
+│   ├── node_modules/           # Dependencies (auto-generated)
+│   ├── .env.local              # Environment variables
+│   ├── .gitignore              # Git ignore file
+│   ├── components.json         # shadcn/ui configuration
+│   ├── eslint.config.mjs       # ESLint configuration
+│   ├── next.config.ts          # Next.js configuration
+│   ├── package.json            # Frontend dependencies
+│   ├── package-lock.json       # Lock file
+│   ├── postcss.config.js       # PostCSS configuration
+│   ├── tailwind.config.ts      # Tailwind CSS configuration
+│   └── tsconfig.json           # TypeScript configuration
+├── backend/                    # Node.js backend application
+│   ├── controllers/            # Route controllers
+│   │   └── authController.js   # Authentication controller
+│   ├── models/                 # Database models
+│   │   ├── User.js             # User model
+│   │   ├── Product.js          # Product model
+│   │   └── Review.js           # Review model
+│   ├── routes/                 # API routes
+│   │   └── auth.js             # Authentication routes
+│   ├── middleware/             # Custom middleware
+│   │   ├── auth.js             # Authentication middleware
+│   │   └── validation.js       # Validation middleware
+│   ├── emails/                 # Email templates (backend)
+│   │   └── OtpEmail.jsx        # OTP email template
+│   ├── node_modules/           # Dependencies (auto-generated)
+│   ├── .env                    # Environment variables
+│   ├── .gitignore              # Git ignore file
+│   ├── package.json            # Backend dependencies
+│   ├── package-lock.json       # Lock file
+│   └── server.js               # Server entry point
+├── .gitignore                  # Root git ignore
+└── README.md                   # Project documentation
 ```
 
 ## 🚀 Getting Started
