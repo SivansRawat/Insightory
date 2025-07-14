@@ -5,13 +5,13 @@ import {
   Card, CardContent, CardHeader, CardTitle, CardDescription,
 } from "@/components/ui/card";
 import {
-  Package, DollarSign, Star, AlertTriangle, TrendingUp, TrendingDown,
-  PieChart as PieIcon, BarChart3, Percent, Award, Target,
+  Package, DollarSign, Star, AlertTriangle, 
+  Percent, Award, Target,
 } from "lucide-react";
 import {
   PieChart, Pie, Cell, ResponsiveContainer,
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  LineChart, Line, Area, AreaChart,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip
+  ,
 } from "recharts";
 
 /* ----------------------- types ----------------------- */
