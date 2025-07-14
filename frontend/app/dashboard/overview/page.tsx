@@ -64,7 +64,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   TrendingUp, 
@@ -77,12 +76,33 @@ import {
   PieChart
 } from 'lucide-react';
 
+
+
+
+interface Product {
+  _id?: string;
+  id?: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage?: number;
+  rating: number;
+  stock: number;
+  brand?: string;
+  category: string;
+  thumbnail?: string;
+  images?: string[];
+}
+
+
 // You'll need to install recharts: npm install recharts
+
+
+
+
 import {
   LineChart,
   Line,
-  BarChart,
-  Bar,
   PieChart as RechartsPieChart,
   Pie,
   Cell,
@@ -93,6 +113,9 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
+
+
+
 
 // Sample data for charts - replace with real API data
 const salesData = [
@@ -132,17 +155,18 @@ export default function OverviewPage() {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-        const products = data.products || [];
+        // const products = data.products || [];
+         const products: Product[] = data.products || [];
 
         setTotalProducts(products.length);
 
         // Calculate low stock items (stock less than 10)
-        const lowStockCount = products.filter((p: any) => p.stock < 10).length;
+        const lowStockCount = products.filter((p) => p.stock < 10).length;
         setLowStockItems(lowStockCount);
 
         // Calculate total sales and average rating
-        const sales = products.reduce((acc: number, p: any) => acc + (p.price * p.stock), 0);
-        const avgRat = products.reduce((acc: number, p: any) => acc + p.rating, 0) / products.length;
+        const sales = products.reduce((acc, p) => acc + (p.price * p.stock), 0);
+        const avgRat = products.reduce((acc, p) => acc + p.rating, 0) / products.length;
         
         setTotalSales(sales);
         setAvgRating(avgRat);
@@ -162,7 +186,7 @@ export default function OverviewPage() {
           Dashboard Overview
         </h1>
         <p className="text-slate-600">
-          Welcome back! Here's what's happening with your inventory today.
+          Welcome back! Here&apos;s what&apos;s happening with your inventory today.
         </p>
       </div>
 

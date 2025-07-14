@@ -173,7 +173,7 @@ export default function VerifyOtpPage() {
             Check your email
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            We've sent a 6-digit code to{' '}
+            We&apos;ve sent a 6-digit code to{' '}
             <span className="font-semibold text-indigo-600">{initialEmail}</span>
           </p>
         </div>
@@ -253,7 +253,7 @@ export default function VerifyOtpPage() {
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
                 <Clock className="h-4 w-4" />
                 <span>
-                  {canResend ? "Didn't receive the code?" : `Resend available in ${countdown}s`}
+                  {canResend ? "Didnt receive the code?" : `Resend available in ${countdown}s`}
                 </span>
               </div>
 
@@ -288,7 +288,7 @@ export default function VerifyOtpPage() {
         {/* Help text */}
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-500">
-            Check your spam folder if you don't see the email.{' '}
+            Check your spam folder if you don&apos;t see the email.{' '}
             <button 
               onClick={() => router.push('/login')} 
               className="text-indigo-600 hover:text-indigo-500"

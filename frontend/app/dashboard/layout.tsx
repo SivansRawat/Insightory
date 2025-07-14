@@ -50,7 +50,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { MenuIcon, Package2Icon, BarChart3Icon, BoxesIcon, HomeIcon, LogOut, Bell, Search, User } from 'lucide-react';
+import { MenuIcon, Package2Icon, BoxesIcon, HomeIcon, LogOut, Bell, Search, User } from 'lucide-react';
 import { useState } from 'react';
 
 interface DashboardLayoutProps {

@@ -93,7 +93,7 @@ export default function LoginPage() {
           <CardHeader className="space-y-1 pb-4">
             <CardTitle className="text-2xl text-center font-semibold">Sign in to your account</CardTitle>
             <CardDescription className="text-center">
-              We'll send you a secure OTP to verify your identity
+                We&apos;ll send you a secure OTP to verify your identity
             </CardDescription>
           </CardHeader>
           
