@@ -268,19 +268,6 @@ Email templates are built using react-email:
 - Configure connection string in environment variables
 - Set up proper security rules and IP whitelisting
 
-## 🧪 Testing
-
-### Frontend Testing
-```bash
-cd frontend
-npm run test
-```
-
-### Backend Testing
-```bash
-cd backend
-npm run test
-```
 
 ## 📝 API Documentation
 
