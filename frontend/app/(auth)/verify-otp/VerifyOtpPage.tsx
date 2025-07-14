@@ -137,7 +137,7 @@ export default function VerifyOtpPage() {
     setCountdown(60);
 
     try {
-      const response = await fetch('https://insightory.onrender.com/api/auth/verify-otp', {
+      const response = await fetch('https://insightory.onrender.com/api/auth/resend-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
