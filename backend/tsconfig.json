@@ -34,7 +34,11 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,       // Skip type checking of all declaration files (*.d.ts)
     "resolveJsonModule": true,  // Allow importing .json files
-    "jsx": "react-jsx"          // Needed for React Email templates
+    "jsx": "react-jsx",          // Needed for React Email templates
+        "allowSyntheticDefaultImports": true
+
+    
+
   },
   "include": [
     "src/**/*.ts",              // Includes all .ts files within backend/src folder
