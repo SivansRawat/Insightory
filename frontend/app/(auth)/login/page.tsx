@@ -1,6 +1,3 @@
-
-
-
 'use client';
 
 import { useState } from 'react';
@@ -23,13 +20,52 @@ import {
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
+  const [isValidEmail, setIsValidEmail] = useState(true);
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const router = useRouter();
 
+const validTLDs = ['com', 'org', 'net', 'io', 'co', 'gov', 'edu', 'us', 'uk', 'in'];
+const validDomains = ['gmail', 'yahoo', 'outlook', 'hotmail', 'icloud', 'protonmail', 'zoho', 'aol'];
+
+const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const value = e.target.value.trim();
+  setEmail(value);
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+  if (!emailRegex.test(value)) {
+    setIsValidEmail(false);
+    return;
+  }
+
+  const [, domainPart] = value.toLowerCase().split('@');
+  const domainParts = domainPart.split('.');
+
+  if (domainParts.length !== 2) {
+    setIsValidEmail(false);
+    return;
+  }
+
+  const [domain, tld] = domainParts;
+
+  const isValid =
+    validTLDs.includes(tld) &&
+    validDomains.includes(domain);
+
+  setIsValidEmail(isValid);
+};
+
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isValidEmail) {
+      setMessage('Please enter a valid email address');
+      return;
+    }
+
     setLoading(true);
     setMessage('');
     setIsSuccess(false);
@@ -98,7 +134,7 @@ export default function LoginPage() {
           </CardHeader>
           
           <CardContent className="space-y-6">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium text-gray-700">
                   Email address
@@ -111,19 +147,24 @@ export default function LoginPage() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="pl-10 h-12 border-gray-200 focus:border-indigo-500 focus:ring-indigo-500 transition-colors"
+                    className={`pl-10 h-12 border ${
+                      isValidEmail ? 'border-gray-200' : 'border-red-400'
+                    } focus:ring-indigo-500 transition-colors`}
                     placeholder="Enter your email address"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={handleEmailChange}
                     disabled={loading}
                   />
                 </div>
+                {!isValidEmail && email && (
+                  <p className="text-sm text-red-600 mt-1">Please enter a valid email address</p>
+                )}
               </div>
 
               <Button
                 type="submit"
                 className="w-full h-12 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
-                disabled={loading || isSuccess}
+                disabled={loading || isSuccess || !isValidEmail || !email}
               >
                 {loading ? (
                   <>

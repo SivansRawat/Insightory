@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <Link href="/login">
             <Button className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm">
-              Get Started
+              Login
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -94,7 +94,7 @@ export default function Home() {
           </p>
           <Link href="/login">
             <Button size="lg" className="bg-white text-indigo-600 hover:bg-white/90 font-semibold px-8 py-4 text-lg">
-              Start Free Trial
+              Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -197,7 +197,7 @@ export default function Home() {
               size="lg"
               className="bg-white text-indigo-600 hover:bg-white/90 font-semibold px-8 py-4 text-lg"
             >
-              Start Your Free Trial
+              Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
