@@ -61,7 +61,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const [activeTab, setActiveTab] = useState('overview');
 
   const handleLogout = async () => {
-    await fetch('http://localhost:5000/api/auth/logout', { method: 'POST', credentials: 'include' });
+    await fetch('https://insightory.onrender.com/api/auth/logout', { method: 'POST', credentials: 'include' });
     window.location.href = '/home';
   };
 

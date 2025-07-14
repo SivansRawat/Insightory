@@ -150,7 +150,7 @@ export default function OverviewPage() {
   useEffect(() => {
     const fetchOverviewData = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/products');
+        const res = await fetch('https://insightory.onrender.com/api/products');
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
